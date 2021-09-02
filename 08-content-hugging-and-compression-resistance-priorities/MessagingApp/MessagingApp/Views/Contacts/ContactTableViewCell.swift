@@ -30,4 +30,5 @@ import UIKit
 
 class ContactTableViewCell: UITableViewCell {
   @IBOutlet var nameLabel: UILabel!
+  @IBOutlet weak var lastMessageLabel: UILabel!
 }

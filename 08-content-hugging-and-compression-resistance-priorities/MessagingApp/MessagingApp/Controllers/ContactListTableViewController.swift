@@ -83,7 +83,7 @@ class ContactListTableViewController: UITableViewController {
     
     let contact = contacts[indexPath.row]
     cell.nameLabel.text = contact.name
-    
+    cell.lastMessageLabel.text = contact.lastMessage
     return cell
   }
   
