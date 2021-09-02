@@ -12,15 +12,17 @@ class ViewController: UIViewController {
     // MARK: - Property
     lazy var primaryLabel: UILabel = {
         let primaryLabel = UILabel()
-        primaryLabel.text = "Product"
+        primaryLabel.text = "Product:"
         primaryLabel.font = UIFont.systemFont(ofSize: 18.0, weight: UIFont.Weight.medium)
         primaryLabel.textColor = UIColor.init(white: 0.1, alpha: 1.0)
         primaryLabel.backgroundColor = UIColor.init(white: 0.9, alpha: 0.5)
         primaryLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        primaryLabel.setContentHuggingPriority(UILayoutPriority.defaultLow, for:.horizontal)
+        primaryLabel.setContentHuggingPriority(UILayoutPriority.defaultLow, for: .horizontal)
         primaryLabel.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: .horizontal)
         
+        //primaryLabel.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .horizontal)
+        //primaryLabel.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: .horizontal)
         return primaryLabel
     }()
     
@@ -31,9 +33,12 @@ class ViewController: UIViewController {
         secondaryLabel.textColor = UIColor.init(white: 0.4, alpha: 1.0)
         secondaryLabel.backgroundColor = UIColor.init(white: 0.9, alpha: 0.5)
         secondaryLabel.translatesAutoresizingMaskIntoConstraints = false
-       
+        
         secondaryLabel.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .horizontal)
         secondaryLabel.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: .horizontal)
+        
+        //secondaryLabel.setContentHuggingPriority(UILayoutPriority.defaultLow, for: .horizontal)
+        //secondaryLabel.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: .horizontal)
         
         return secondaryLabel
     }()
@@ -44,9 +49,9 @@ class ViewController: UIViewController {
         addPrimaryLabelWithConstraints()
         addSecondaryLabelWithConstraints()
         addConstraintsBetweenLabels()
-        updateProductName(name: "Apple Mac mini - M1")
+        updateProductName(name: "Apple Macbook Pro Retina 2013")
     }
-
+    
     // MARK: - Private method
     private func addPrimaryLabelWithConstraints() {
         self.view.addSubview(primaryLabel)
